@@ -14,6 +14,9 @@
 		3609A7F72A7BDB81007E6EBD /* xbluetoothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609A7F62A7BDB81007E6EBD /* xbluetoothTests.swift */; };
 		3609A8012A7BDB81007E6EBD /* xbluetoothUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609A8002A7BDB81007E6EBD /* xbluetoothUITests.swift */; };
 		3609A8032A7BDB81007E6EBD /* xbluetoothUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609A8022A7BDB81007E6EBD /* xbluetoothUITestsLaunchTests.swift */; };
+		3609A8102A7BDC12007E6EBD /* BluetoothMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609A80F2A7BDC12007E6EBD /* BluetoothMenuItem.swift */; };
+		3609A8122A7BDE62007E6EBD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609A8112A7BDE62007E6EBD /* Constants.swift */; };
+		3609A8142A7BDFBA007E6EBD /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609A8132A7BDFBA007E6EBD /* BluetoothManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		3609A7FC2A7BDB81007E6EBD /* xbluetoothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xbluetoothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3609A8002A7BDB81007E6EBD /* xbluetoothUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xbluetoothUITests.swift; sourceTree = "<group>"; };
 		3609A8022A7BDB81007E6EBD /* xbluetoothUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xbluetoothUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3609A80F2A7BDC12007E6EBD /* BluetoothMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothMenuItem.swift; sourceTree = "<group>"; };
+		3609A8112A7BDE62007E6EBD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3609A8132A7BDFBA007E6EBD /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,12 @@
 			children = (
 				3609A7E42A7BDB7E007E6EBD /* xbluetoothApp.swift */,
 				3609A7E62A7BDB7E007E6EBD /* ContentView.swift */,
+				3609A80F2A7BDC12007E6EBD /* BluetoothMenuItem.swift */,
+				3609A8112A7BDE62007E6EBD /* Constants.swift */,
 				3609A7E82A7BDB81007E6EBD /* Assets.xcassets */,
 				3609A7ED2A7BDB81007E6EBD /* xbluetooth.entitlements */,
 				3609A7EA2A7BDB81007E6EBD /* Preview Content */,
+				3609A8132A7BDFBA007E6EBD /* BluetoothManager.swift */,
 			);
 			path = xbluetooth;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3609A8102A7BDC12007E6EBD /* BluetoothMenuItem.swift in Sources */,
 				3609A7E72A7BDB7E007E6EBD /* ContentView.swift in Sources */,
 				3609A7E52A7BDB7E007E6EBD /* xbluetoothApp.swift in Sources */,
+				3609A8122A7BDE62007E6EBD /* Constants.swift in Sources */,
+				3609A8142A7BDFBA007E6EBD /* BluetoothManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,18 +435,22 @@
 				CODE_SIGN_ENTITLEMENTS = xbluetooth/xbluetooth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"xbluetooth/Preview Content\"";
 				DEVELOPMENT_TEAM = 9Y67R9P3DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = XBluetooth;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "The app requires access to bluetooth to connect you to nearby devices.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "The app requires access to bluetooth to show you to nearby devices.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.razvangeangu.xbluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -450,18 +466,22 @@
 				CODE_SIGN_ENTITLEMENTS = xbluetooth/xbluetooth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"xbluetooth/Preview Content\"";
 				DEVELOPMENT_TEAM = 9Y67R9P3DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = XBluetooth;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "The app requires access to bluetooth to connect you to nearby devices.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "The app requires access to bluetooth to show you to nearby devices.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.razvangeangu.xbluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
